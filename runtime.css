@@ -1,0 +1,44 @@
+/* 运行时间显示区域的基础样式 */
+div#runtime {
+  width: 180px;                  /* 固定宽度 */
+  margin: auto;                  /* 水平居中 */
+  color: #fff;                   /* 白色文字 */
+  padding-inline: 5px;           /* 左右内边距 */
+  border-radius: 10px;           /* 圆角 */
+  background-color: rgba(0,0,0,.7); /* 70%不透明的黑色背景 */
+}
+
+/* 工作状态板的字体大小 */
+#workboard {
+  font-size: 12px;
+}
+
+/* 暗黑模式下的特殊效果 */
+[data-theme=dark] div#runtime {
+  color: #28b4c8;                /* 青色文字 */
+  box-shadow: 0 0 5px rgba(28,69,218,.71); /* 蓝色发光效果 */
+  animation: flashlight 1s linear infinite alternate; /* 闪烁动画 */
+}
+
+/* GitHub徽章图片高度调整 */
+#ghbdages .github-badge img {
+  height: 20px;
+}
+
+/* 定义闪烁动画 - 兼容各浏览器前缀 */
+@-moz-keyframes flashlight {
+  from { box-shadow: 0 0 5px #1478d2; }
+  to { box-shadow: 0 0 2px #1478d2; }
+}
+@-webkit-keyframes flashlight {
+  from { box-shadow: 0 0 5px #1478d2; }
+  to { box-shadow: 0 0 2px #1478d2; }
+}
+@-o-keyframes flashlight {
+  from { box-shadow: 0 0 5px #1478d2; }
+  to { box-shadow: 0 0 2px #1478d2; }
+}
+@keyframes flashlight {
+  from { box-shadow: 0 0 5px #1478d2; }
+  to { box-shadow: 0 0 2px #1478d2; }
+}
